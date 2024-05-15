@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
   templateUrl: './game-control.component.html',
   styleUrl: './game-control.component.scss'
 })
-export class GameControlComponent {
+export class GameControlComponent implements OnDestroy{
+ 
  @Output()  OnIncreament = new EventEmitter();
 
  
@@ -20,6 +21,10 @@ export class GameControlComponent {
 
 StopIncreament(){
   clearInterval(this.intervalId);
+}
+
+ngOnDestroy(): void {
+    
 }
 
 
