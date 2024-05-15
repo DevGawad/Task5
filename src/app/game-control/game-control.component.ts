@@ -24,7 +24,7 @@ StopIncreament(){
 }
 
 ngOnDestroy(): void {
-    StopIncreament();
+  this.StopIncreament();
 }
 
 
