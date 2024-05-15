@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assign5';
+
+  Numbers : number[]=[];
+
+  
+  Increament(number : number) :void{
+    this.Numbers.push(number);
+    console.log(this.Numbers);
+  }
 }
